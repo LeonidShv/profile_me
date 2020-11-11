@@ -1,0 +1,298 @@
+@import 'reset.css';
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.d-none {
+    display: none;
+}
+
+.wrap {
+    display: flex;
+    height: 100vh;
+}
+
+.info,
+.registry {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+.info {
+    padding-right: 64px;
+    background: url('../images/numbers.png'), #9e5966;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.info__text,
+.info__footer {
+    margin-left: auto;
+    width: 386px;
+}
+
+.info__text,
+.info__footer,
+.info__title {
+    text-align: right;
+    color: #fff;
+}
+
+.info__text,
+.info__footer {
+    font-weight: 400;
+}
+
+.info__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    margin-bottom: 86px;
+}
+
+.info__text {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 100px;
+}
+
+.info__footer {
+    font-size: 12px;
+    line-height: 14.6px;
+}
+
+/*form*/
+
+.registry {
+    margin-left: 59px;
+    width: 386px;
+}
+
+.registry__icon {
+    width: 160px;
+    height: auto;
+    margin: 0 auto 21px;
+}
+
+.registry__label {
+    display: block;
+}
+
+.registry__label,
+.registry__check-label,
+.registry__label_warning {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.registry__label,
+.registry__check-label {
+    color: #555;
+}
+
+.registry__input {
+    margin: 10px 0 15px;
+    padding: 0;
+    padding-left: 10px;
+    line-height: 36px;
+    border: 1px solid #C6C6C6;
+    outline: 0;
+    border-radius: 5px;
+}
+
+.registry__input:focus {
+    box-shadow: 0 0 0 1px #8889B9;
+}
+
+.registry__input_month,
+.month__option_grey,
+.registry__input_day::placeholder,
+.registry__input_year::placeholder {
+    color: #a6a6a6;
+}
+
+.month__option,
+.registry__month_chenged {
+    color: #222;
+}
+
+.registry__gender {
+    margin-bottom: 15px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.registry__check-label {
+    margin-left: 6px;
+    display: inline-block;
+    position: relative;
+    bottom: 2px;
+}
+
+.registry__check {
+    margin-left: 20px;
+}
+
+.registry__input_month {
+    height: 40px;
+}
+
+.registry__input_month,
+.registry__input_day,
+.registry__input_year {
+    box-sizing: border-box;
+}
+
+.d-grid {
+    display: grid;
+    grid-template-columns: 48% 18% 25%;
+    gap: 4.5%;
+}
+
+.registry__check-license {
+    margin: 34px 0 25px;
+}
+
+.registry__submit {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 40px;
+    color: #fff;
+    background: #8889B9;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    transition: background .35s;
+}
+
+.registry__submit:hover {
+    background: #53537e;
+}
+
+.registry__password-wrap {
+    position: relative;
+}
+
+.registry__toggle-key {
+    position: absolute;
+    right: 10px;
+    top: 47%;
+    transform: translateY(-50%);
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 10px;
+    border: 0;
+    background: #fff;
+    color: #c6c6c6;
+    transition: color .17s;
+}
+
+.registry__toggle-key:hover {
+    color: #979696;
+}
+
+.registry__input_pas {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.registry__input_warning {
+    border: 1px solid #EA4989;
+}
+
+.registry__label_warning {
+    color: #EA4989;
+    margin: 0;
+}
+
+@media (max-width: 1280px), (max-height: 720px) {
+    .wrap {
+        height: auto;
+    }
+
+    .registry__submit {
+        margin-bottom: 39px;
+    }
+    
+    .info__title,
+    .info__text,
+    .info__footer {
+        text-align: center;
+    }
+
+    .info__title {
+        font-size: 28px;
+    }
+
+    .info__text {
+        margin: 0 auto 100px;
+        font-size: 16px;
+    }
+
+    .info__footer {
+        margin: 0 auto;
+    }
+
+    .registry {
+        margin: 0 auto;
+    }
+
+    .registry__icon {
+        margin-top: 38px;
+        width: 129px;
+        height: auto;
+    }
+
+    .info {
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 920px) {
+    .d-grid {
+        display: grid;
+        grid-template-columns: 40% 56%;
+        column-gap: 4%;
+        row-gap: 0;
+    }
+
+    .registry__input_month {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .registry {
+        padding: 0 15px;
+    }
+    .info {
+        display: none;
+    }
+
+    .registry__icon {
+        margin-top: 34px;
+        width: 96px;
+        height: auto;
+    }
+
+    .registry__label,
+    .registry__gender,
+    .registry__check-label,
+    .registry__input {
+        font-size: 12px;
+    }
+
+    .registry__submit {
+        margin-bottom: 89px;
+    }
+}

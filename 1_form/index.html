@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <main>
         <div class="wrap">
             <div class="info">
                 <h2 class="info__title">Join the community!</h2>
-                <p class="info text">
+                <p class="info__text">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, ducimus? Harum eaque adipisci at officiis animi aperiam quos. Quidem dolore temporibus delectus alias quod magnam quasi, officia ipsam reprehenderit modi deserunt laudantium harum ducimus nihil facilis assumenda voluptatum itaque velit culpa voluptate accusamus? Necessitatibus animi similique enim suscipit ullam. In!
                 </p>
                 <p class="info__footer">
@@ -19,51 +20,55 @@
                 </p>
             </div>
 
-            <form action="#" class="registry">
+            <form action="#" class="registry" autocomplete="on">
                 <img class="registry__icon" src="images/form_calendar.png" alt="calendar in the form">
-                <div class="registry__block">
-                    <label for="email" class="registry__label">Email address</label>
-                    <input type="email" name="email" id="email" class="registry__input" autocomplete="email" required>
-                </div>
-                <div class="registry__block">
-                    <label for="password" class="registry__label">Password</label>
-                    <input type="password" name="new-password" id="password" class="registry__input" autocomplete="new-password" required>
+                <label for="email" class="registry__label">Email address</label>
+                <input type="email" name="email" id="email" class="registry__input" autocomplete="email" required>
+
+                <label for="password" class="registry__label">Password</label>
+                <div class="registry__password-wrap">
+                    <input type="password" name="new-password" id="password" class="registry__input registry__input_pas" autocomplete="new-password" required>
                     <button type="button" class="registry__toggle-key" aria-label="Show password as plain text.
-                    Warning: this will display your password on the screen."></button>
+                    Warning: this will display your password on the screen.">Show</button>
                 </div>
-                <div class="registry__block">
+
+                <div class="d-flex">
                     <label for="fullName" class="registry__label">Full name</label>
-                    <input type="text" name="fullName" id="fullName" class="registry__input" autocomplete="name" required>
+                    <p class="registry__label_warning d-none">
+                        Please supply a full name
+                    </p>
                 </div>
-                <div class="registry__block">
-                    <label for="month" class="registry__label">Date of birth</label>
+                <input type="text" pattern="^[a-zA-Z]+\s[a-zA-Z ]+$" name="fullName" id="fullName" class="registry__input" autocomplete="name" required>
+
+                <label for="month" class="registry__label">Date of birth</label>
+                <div class="d-grid">
                     <select name="select" id="month" class="registry__input registry__input_month" required>
-                        <option value="month" disabled selected>month</option>
-                        <option value="january">January</option>
-                        <option value="february">February</option>
-                        <option value="march">March</option>
-                        <option value="april">April</option>
-                        <option value="may">May</option>
-                        <option value="june">June</option>
-                        <option value="july">July</option>
-                        <option value="august">August</option>
-                        <option value="september">September</option>
-                        <option value="october">October</option>
-                        <option value="november">November</option>
-                        <option value="december">December</option>
+                        <option class="month__option_grey" value="" disabled selected>Month</option>
+                        <option class="month__option" value="january">January</option>
+                        <option class="month__option" value="february">February</option>
+                        <option class="month__option" value="march">March</option>
+                        <option class="month__option" value="april">April</option>
+                        <option class="month__option" value="may">May</option>
+                        <option class="month__option" value="june">June</option>
+                        <option class="month__option" value="july">July</option>
+                        <option class="month__option" value="august">August</option>
+                        <option class="month__option" value="september">September</option>
+                        <option class="month__option" value="october">October</option>
+                        <option class="month__option" value="november">November</option>
+                        <option class="month__option" value="december">December</option>
                     </select>
                     <input type="number" name="day" class="registry__input registry__input_day" placeholder="Day" min="1" max="31" required>
                     <input type="number" name="year" class="registry__input registry__input_year" placeholder="Year" min="1900" max="2020" required>
                 </div>
-                <div class="registry__block">
+                <div>
                     <p class="registry__gender">Gender</p>
                     <input type="radio" name="gender" id="male" required>
                     <label class="registry__check-label" for="male">Male</label>
-                    <input type="radio" name="gender" id="female" required>
+                    <input class="registry__check" type="radio" name="gender" id="female" required>
                     <label class="registry__check-label" for="female">Female</label>
                 </div>
-                <div class="registry__block">
-                    <input type="checkbox" name="license" id="license" required>
+                <div>
+                    <input class="registry__check-license" type="checkbox" name="license" id="license" required>
                     <label class="registry__check-label" for="license">I agree with Terms and Conditions</label>
                 </div>
 
@@ -71,5 +76,7 @@
             </form>
         </div>
     </main>
+
+    <script src="script/main.js"></script>
 </body>
 </html>
