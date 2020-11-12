@@ -1,11 +1,11 @@
-let btnShowPass = document.querySelector('.registry__toggle-key');
+let btnTogglePass = document.querySelector('.registry__toggle-key');
 let inputPass = document.querySelector('.registry__input_pas');
 let inputFullName = document.querySelector('#fullName');
 let btnSubmit = document.querySelector('.registry__submit');
 let warningMessage = document.querySelector('.registry__label_warning');
 let btnSelectMonth = document.querySelector('.registry__input_month');
 
-btnShowPass.addEventListener('click', showPassword);
+btnTogglePass.addEventListener('click', showPassword);
 btnSubmit.addEventListener('click', checkFullName);
 btnSelectMonth.addEventListener('change', selectMonth);
 
@@ -15,8 +15,10 @@ function showPassword() {
     let type = inputPass.type;
 
     if (type === 'password') {
+        btnTogglePass.textContent = 'Hide';
         inputPass.setAttribute('type', 'text'); 
     } else {
+        btnTogglePass.textContent = 'Show';
         inputPass.setAttribute('type', 'password'); 
     }
 }
