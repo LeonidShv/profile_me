@@ -1,0 +1,102 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.toast {
+    margin-bottom: 20px;
+    width: 260px;
+    border-radius: 5px;
+}
+
+.wrap {
+    position: absolute;
+}
+
+.toast__header {
+    display: flex;
+    padding: 3px 10px;
+    line-height: 31px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    text-transform: capitalize;
+}
+
+.toast__title {
+    font-weight: 500;
+}
+
+.toast__time {
+    margin-left: auto;
+    font-size: 0.8em;
+}
+
+.toast__close {
+    margin-left: 10px;
+    background: 0;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    font-size: 19px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color .18s;
+}
+
+.toast__close:hover {
+    color: rgb(27, 27, 27);
+}
+
+.toast__message {
+    background: #e1e2e2;
+    padding: 15px 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.bg--success {
+    background: #28a745;
+}
+
+.bg--warning {
+    background: #ffc107;
+}
+
+.bg--error {
+    background: #dc3545;
+}
+
+.bg--info {
+    background: #17a2b8;
+}
+
+.text--warning {
+    color: #212529;
+}
+
+.text--default {
+    color: #fff;
+}
+
+/* top-right' | 'top-left' | 'bottom-right' | 'bottom-left'
+ */
+
+.top-right {
+    top: 50px;
+    right: 50px;
+}
+
+.top-left {
+    top: 50px;
+    left: 50px;
+}
+
+.bottom-right {
+    bottom: 50px;
+    right: 50px;
+}
+
+.bottom-left {
+    bottom: 50px;
+    left: 50px;
+}
