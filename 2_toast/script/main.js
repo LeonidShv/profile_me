@@ -1,30 +1,13 @@
-// type ToastKey = number;
-
-// type Toast = {
-//   show(
-//     content: 'string',
-//     options?: {
-//       variant: 'success' | 'warning' | 'error' | 'info';
-//       position: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
-//       rootElement: HTMLElement;
-//       autoHideDuration: number;
-//       closeOnClick: boolean;
-//     },
-//   ): ToastKey;
-//   close(key: ToastKey): void;
-// };
-
 let idToast = 0;
 let root = null;
 const wrapToast = document.createElement('div');
 
-
 function show(content, options) {
-    const { 
-        variant = 'info', 
-        position = 'top-right', 
+    const {
+        variant = 'info',
+        position = 'top-right',
         rootElement = '#root',
-        autoHideDuration = '10s'
+        autoHideDuration = '5s'
     } = options;
 
     const color = variant === 'warning' ? variant : 'default';
@@ -58,13 +41,11 @@ function makeWrapToast(position, toast) {
 }
 
 function closeToast(elem = '') {
-    if (elem) {
+    if (!elem.target) {
         elem.parentElement.parentElement.remove();
-
-        return;
+    } else {
+        this.parentElement.parentElement.remove();
     }
-    
-    this.parentElement.parentElement.remove();
 }
 
 function changeTime() {
@@ -104,11 +85,17 @@ function swapSecondsToMinutes(time) {
         minutes = Math.floor(time / 60);
         return `${minutes}m ${time - minutes * 60}s`;
     }
-    
+
     return time + 's';
 }
 
-show('asdsad', {variant: 'success', autoHideDuration: '15s'});
-show('asdsad', {variant: 'success', autoHideDuration: '5s'});
-show('asdsad', {variant: 'success', autoHideDuration: '3s'});
+/********TEST********/
+
+show('default toast', {});
+show('success, top-right, #root, 3s', { variant: 'success', position: 'top-right', rootElement: '#root', autoHideDuration: '3s' });
+
+setTimeout(() => {
+    show('warning, bottom-right, .container, 15s', { variant: 'warning', position: 'bottom-right', rootElement: '.container', autoHideDuration: '15s' });
+    show('error, bottom-right, .container, 9s', { variant: 'error', position: 'bottom-right', rootElement: '.container', autoHideDuration: '13s' });    
+}, 6000);
 
