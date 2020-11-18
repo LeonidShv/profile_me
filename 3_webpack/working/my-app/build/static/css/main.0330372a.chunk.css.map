@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/index.scss"],"names":[],"mappings":"AAEA,MACI,aAHI,CAIJ,iEACA,CAAA,qBACA,CAAA,uBAAA","file":"main.0330372a.chunk.css","sourcesContent":["$width: 5em;\n\n.test {\n    font-size: $width;\n    background: url('./logo-og.png') no-repeat;\n    background-size: cover;\n    background-position: center;\n}"]}

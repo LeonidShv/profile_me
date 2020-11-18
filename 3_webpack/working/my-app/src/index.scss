@@ -1,0 +1,8 @@
+$width: 5em;
+
+.test {
+    font-size: $width;
+    background: url('./logo-og.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+}

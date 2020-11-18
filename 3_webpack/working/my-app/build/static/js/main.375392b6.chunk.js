@@ -1,0 +1,2 @@
+(this["webpackJsonpmy-app"]=this["webpackJsonpmy-app"]||[]).push([[0],{10:function(e,t,n){"use strict";n.r(t);var s=n(0),c=(n(1),n(3)),r=n.n(c),a=(n(9),n.p+"static/media/logo-og.ef20e673.png");var i=function(){var e=null!==null?null:22;return Object(s.jsxs)("div",{children:[Object(s.jsxs)("p",{className:"test",children:["dsff",e]}),Object(s.jsx)("img",{src:a})]})};r.a.render(Object(s.jsx)(i,{}),document.getElementById("root"))},9:function(e,t,n){}},[[10,1,2]]]);
+//# sourceMappingURL=main.375392b6.chunk.js.map
